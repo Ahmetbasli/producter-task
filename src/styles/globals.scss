@@ -1,10 +1,9 @@
-@import "src/styles/base/_fonts";
+@use "src/styles/variables/index" as v;
 @import "src/styles/base/_reset";
-@import "src/styles/variables/_colors";
 
 body {
-  color: $main-text-color;
-  font-family: $primary-font;
+  color: v.$main-text-color;
+  font-family: v.$primary-font;
   font-size: 13px;
   font-weight: 500;
   line-height: 15.73px;
