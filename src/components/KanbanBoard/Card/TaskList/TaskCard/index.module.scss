@@ -1,0 +1,8 @@
+@use "src/styles/variables/index" as v;
+.wrapper {
+  width: 242px;
+  height: 88px;
+  border: 1px solid rgba(0, 23, 71, 0.05);
+  border-radius: 4px;
+  margin-top: 12px;
+}
