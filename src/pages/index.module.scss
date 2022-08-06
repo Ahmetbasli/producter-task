@@ -1,0 +1,9 @@
+@use "src/styles/variables/index" as v;
+
+.main {
+  display: flex;
+}
+.rightSide {
+  flex: 1;
+  background-color: v.$light-gray;
+}

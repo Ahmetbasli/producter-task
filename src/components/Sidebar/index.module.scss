@@ -1,0 +1,8 @@
+@use "src/styles/variables/index" as v;
+.wrapper {
+  background-color: v.$white;
+  height: calc(100vh - 56px);
+  width: 185px;
+  border: 1px solid #f6f9fb;
+  border-top: none;
+}
