@@ -1,0 +1,11 @@
+@import "src/styles/base/_fonts";
+@import "src/styles/base/_reset";
+@import "src/styles/variables/_colors";
+
+body {
+  color: $main-text-color;
+  font-family: $primary-font;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 15.73px;
+}
