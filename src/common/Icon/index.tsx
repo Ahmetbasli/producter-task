@@ -1,11 +1,7 @@
 import React, { FC } from "react";
 
 const Icon: FC<{ name: string }> = ({ name }) => {
-  return (
-    <div className="App">
-      <img src={`/icons/${name}.svg`} alt="logo" />
-    </div>
-  );
+  return <img src={`/icons/${name}.svg`} alt="logo" />;
 };
 
 export default Icon;
