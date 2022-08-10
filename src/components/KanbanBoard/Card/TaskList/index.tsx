@@ -6,7 +6,7 @@ import TaskCard from "./TaskCard";
 import getPlaceHolderDiv from "./TaskCard/helpers/handleTaskPlaceHolder";
 import TaskListProps from "./types";
 
-const TaskList: FC<TaskListProps> = ({ tasks, name }) => {
+const TaskList: FC<TaskListProps> = ({ tasks, TaskListId }) => {
   const dispatch = useAppDispatch();
   const dragItemInStore = useAppSelector(selectDragItem);
 
@@ -29,15 +29,20 @@ const TaskList: FC<TaskListProps> = ({ tasks, name }) => {
     e.preventDefault();
     e.stopPropagation();
 
-    dispatch(addToList({ name }));
+    dispatch(addToList({ TaskListId }));
     setIsEntered(false);
   };
 
   return (
     <div className={styles.wrapper}>
       <div>
-        {tasks.map((item, index) => (
-          <TaskCard key={item} info={item} index={index} name={name} />
+        {tasks.map((task, index) => (
+          <TaskCard
+            key={task.id}
+            taskInfo={task}
+            index={index}
+            TaskListId={TaskListId}
+          />
         ))}
       </div>
       <div

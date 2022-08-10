@@ -1,5 +1,4 @@
 import React, { FC, useEffect } from "react";
-import TodoIcon from "src/common/Icons/Todo";
 import { useAppDispatch, useAppSelector } from "src/store/app/hooks";
 import {
   updateLists,
@@ -8,11 +7,10 @@ import {
   updateDragOverItem,
 } from "src/store/features/board/slice";
 import getPlaceHolderDiv from "./helpers/handleTaskPlaceHolder";
-
 import styles from "./index.module.scss";
 import TaskCardProps from "./types";
 
-const TaskCard: FC<TaskCardProps> = ({ info, index, name }) => {
+const TaskCard: FC<TaskCardProps> = ({ taskInfo, index, TaskListId }) => {
   const dispatch = useAppDispatch();
   const dragItemInStore = useAppSelector(selectDragItem);
   const domDragItem = React.useRef<any>(null);
@@ -21,8 +19,10 @@ const TaskCard: FC<TaskCardProps> = ({ info, index, name }) => {
     e.stopPropagation();
     const { height } = e.currentTarget.getBoundingClientRect();
 
-    dispatch(updateDragItem({ index, info, name, height: height - 12 }));
-    dispatch(updateDragOverItem({ index, info, name }));
+    dispatch(
+      updateDragItem({ index, taskInfo, TaskListId, height: height - 12 })
+    );
+    dispatch(updateDragOverItem({ index, taskInfo, TaskListId }));
 
     const taskGrayBackgroundPlaceHolder = getPlaceHolderDiv();
     taskGrayBackgroundPlaceHolder!.style.height = `${height}px`;
@@ -53,19 +53,31 @@ const TaskCard: FC<TaskCardProps> = ({ info, index, name }) => {
     );
 
     // compair if two Item are in the same list
-    if (name === dragItemInStore?.name) {
+    if (TaskListId === dragItemInStore?.TaskListId) {
       if (index > dragItemInStore?.index) {
         dispatch(
-          updateDragOverItem({ index: isUp ? index - 1 : index, info, name })
+          updateDragOverItem({
+            index: isUp ? index - 1 : index,
+            taskInfo,
+            TaskListId,
+          })
         );
       } else {
         dispatch(
-          updateDragOverItem({ index: isUp ? index : index + 1, info, name })
+          updateDragOverItem({
+            index: isUp ? index : index + 1,
+            taskInfo,
+            TaskListId,
+          })
         );
       }
     } else {
       dispatch(
-        updateDragOverItem({ index: isUp ? index : index + 1, info, name })
+        updateDragOverItem({
+          index: isUp ? index : index + 1,
+          taskInfo,
+          TaskListId,
+        })
       );
     }
   };
@@ -94,9 +106,8 @@ const TaskCard: FC<TaskCardProps> = ({ info, index, name }) => {
       }}
     >
       <div className={styles.wrapper}>
-        {info}asjkfjkdasjf Lorem ipsum dolor sit amet, consectetur adipisicing
-        elit. Vitae ad, deserunt deleniti officia dolor aperiam commodi nesciunt
-        <TodoIcon />
+        asjkfjkdasjf Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Vitae ad, deserunt deleniti officia dolor aperiam commodi nesciunt
       </div>
     </div>
   );

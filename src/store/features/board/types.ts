@@ -1,14 +1,27 @@
-export interface DragItemProp {
-  info: any;
-  name: keyof BoardState["lists"];
+export interface DragItem {
+  taskInfo: any;
+  TaskListId: number;
   index: number;
   height?: string;
 }
+export interface Task {
+  id: number;
+  content: string;
+  taksCode: string;
+  taksCodeIcon: string;
+  importancy: string;
+  points: number;
+  userLogo: string;
+}
+export interface CardProps {
+  id: number;
+  title: string;
+  icon: string;
+  points: number;
+  tasks: Task[];
+}
 export default interface BoardState {
-  dragItem: DragItemProp | null;
-  dragOverItem: DragItemProp | null;
-  lists: {
-    todo: any[];
-    done: any[];
-  };
+  dragItem: DragItem | null;
+  dragOverItem: DragItem | null;
+  lists: CardProps[];
 }

@@ -1,7 +1,7 @@
-import { DragItemProp } from "src/store/features/board/types";
+import { Task } from "src/store/features/board/types";
 
 export default interface TaskCardProps {
-  info: string;
+  taskInfo: Task;
   index: number;
-  name: DragItemProp["name"];
+  TaskListId: number;
 }

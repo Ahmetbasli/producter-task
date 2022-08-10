@@ -1,14 +1,11 @@
 import type { RootState } from "src/store/app/store";
 import BoardState, { DragItemProp } from "src/store/features/board/types";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-
+import lists from "src/data/KanbanBoardLists.json";
 const initialState: BoardState = {
   dragItem: null,
   dragOverItem: null,
-  lists: {
-    todo: ["1", "2", "3", "10"],
-    done: ["4", "5", "6"],
-  },
+  lists: lists,
 };
 
 const boardSlice = createSlice({
@@ -18,22 +15,28 @@ const boardSlice = createSlice({
     addToList(
       state,
       action: PayloadAction<{
-        name: DragItemProp["name"];
+        TaskListId: number;
       }>
     ) {
-      if (!state.dragItem) return;
-      state.lists[state.dragItem.name].splice(state.dragItem.index, 1);
-      state.lists[action.payload.name].push(state.dragItem!.info);
+      if (state.dragItem === null) return;
+      // remove dragginItem from list
+      state.lists
+        .find((list) => list.id === state.dragItem!.TaskListId)
+        ?.tasks.splice(state.dragItem.index, 1);
+      // add draggingItem to list
+      state.lists
+        .find((list) => list.id === action.payload.TaskListId)
+        ?.tasks.push(state.dragItem.taskInfo);
     },
     updateLists(state) {
       if (!state.dragItem || !state.dragOverItem) return;
 
-      state.lists[state.dragItem.name].splice(state.dragItem.index, 1);
-      state.lists[state.dragOverItem.name].splice(
-        state.dragOverItem.index,
-        0,
-        state.dragItem.info
-      );
+      state.lists
+        .find((list) => list.id === state.dragItem!.TaskListId)
+        ?.tasks.splice(state.dragItem.index, 1);
+      state.lists
+        .find((list) => list.id === state.dragOverItem!.TaskListId)
+        ?.tasks.splice(state.dragOverItem.index, 0, state.dragItem.taskInfo);
     },
     updateDragItem(state, action) {
       state.dragItem = action.payload;
