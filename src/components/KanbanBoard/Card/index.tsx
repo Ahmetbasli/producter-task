@@ -1,16 +1,18 @@
 import React, { FC } from "react";
+import getPlaceHolderDiv from "src/components/KanbanBoard/Card/TaskList/TaskCard/helpers/handleTaskPlaceHolder";
 import styles from "./index.module.scss";
 import TaskList from "./TaskList";
+import CardProps from "./types";
 
-interface CardProps {
-  title: string;
-  Icon: FC;
-  points: number;
-}
+const Card: FC<CardProps> = ({ title, Icon, points, tasks, name }) => {
+  const handleDragLeave = (e: React.DragEvent<HTMLDivElement>) => {
+    e.stopPropagation();
+    e.preventDefault();
+    getPlaceHolderDiv()!.remove();
+  };
 
-const Card: FC<CardProps> = ({ title, Icon, points }) => {
   return (
-    <div className={styles.wrapper}>
+    <div onDragLeave={(e) => handleDragLeave(e)} className={styles.wrapper}>
       <div className={styles.header}>
         <div className={styles.title}>
           <Icon />
@@ -18,7 +20,7 @@ const Card: FC<CardProps> = ({ title, Icon, points }) => {
         </div>
         <div className={styles.points}>{points}</div>
       </div>
-      <TaskList />
+      <TaskList tasks={tasks} name={name} />
     </div>
   );
 };

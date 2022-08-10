@@ -1,8 +1,26 @@
 @use "src/styles/variables/index" as v;
+
+.dragWrapper {
+  padding-top: 12px;
+  opacity: 0.999;
+}
+
 .wrapper {
+  padding: 12px;
   width: 242px;
-  height: 88px;
-  border: 1px solid rgba(0, 23, 71, 0.05);
+  white-space: break-spaces;
+  border: 1px solid v.$light-gray;
   border-radius: 4px;
-  margin-top: 12px;
+  background: white;
+  background-color: white;
+  cursor: pointer;
+  z-index: -999;
+}
+.draging {
+  position: relative;
+  color: v.$light-gray;
+  background: v.$light-gray;
+  svg {
+    visibility: hidden;
+  }
 }

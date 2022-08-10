@@ -1,4 +1,14 @@
+export interface DragItemProp {
+  info: any;
+  name: keyof BoardState["lists"];
+  index: number;
+  height?: string;
+}
 export default interface BoardState {
-  todoList: any[];
-  doneList: any[];
+  dragItem: DragItemProp | null;
+  dragOverItem: DragItemProp | null;
+  lists: {
+    todo: any[];
+    done: any[];
+  };
 }
