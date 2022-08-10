@@ -1,0 +1,36 @@
+[
+  {
+    "id": 1,
+    "title": "To do",
+    "icon": "todo",
+    "points": 123,
+    "tasks": [
+      {
+        "id": 11,
+        "content": "content",
+        "taksCode": "TSK-01",
+        "taksCodeIcon": "icon",
+        "importancy": "lower",
+        "points": 8,
+        "userLogo": "userLogo"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Done",
+    "icon": "done",
+    "points": 72,
+    "tasks": [
+      {
+        "id": 21,
+        "content": "content",
+        "taksCode": "TSK-01",
+        "taksCodeIcon": "icon",
+        "importancy": "lower",
+        "points": 8,
+        "userLogo": "userLogo"
+      }
+    ]
+  }
+]
