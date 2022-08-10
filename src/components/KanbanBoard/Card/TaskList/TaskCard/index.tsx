@@ -1,4 +1,6 @@
 import React, { FC, useEffect } from "react";
+import Icon from "src/common/Icon";
+import ImportancyBarrs from "src/common/ImportancyBars";
 import { useAppDispatch, useAppSelector } from "src/store/app/hooks";
 import {
   updateLists,
@@ -106,8 +108,21 @@ const TaskCard: FC<TaskCardProps> = ({ taskInfo, index, TaskListId }) => {
       }}
     >
       <div className={styles.wrapper}>
-        asjkfjkdasjf Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Vitae ad, deserunt deleniti officia dolor aperiam commodi nesciunt
+        {/* content */}
+        <div>{taskInfo.content}</div>
+        <div className={styles.footer}>
+          <div className={styles.left}>
+            <Icon name={taskInfo.taksCodeIcon} />
+            <span>{taskInfo.taksCode}</span>
+          </div>
+
+          <div className={styles.right}>
+            <ImportancyBarrs importancy={taskInfo.importancy} />
+            <div className={styles.point}>{taskInfo.points}</div>
+            <Icon name={taskInfo.userLogo} />
+          </div>
+        </div>
+        {/* footer */}
       </div>
     </div>
   );

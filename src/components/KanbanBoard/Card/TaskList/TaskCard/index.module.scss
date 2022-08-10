@@ -6,7 +6,7 @@
 }
 
 .wrapper {
-  padding: 12px;
+  padding: 12px 12px 8px 12px;
   width: 242px;
   white-space: break-spaces;
   border: 1px solid v.$light-gray;
@@ -14,13 +14,33 @@
   background: white;
   background-color: white;
   cursor: pointer;
-  z-index: -999;
+  &:active {
+    cursor: grabbing;
+  }
 }
-.draging {
-  position: relative;
-  color: v.$light-gray;
-  background: v.$light-gray;
-  svg {
-    visibility: hidden;
+.footer {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+.left {
+  display: flex;
+  align-items: center;
+  span {
+    margin-left: 4px;
+    font-weight: 300;
+    color: #8c97ac;
+    line-height: 24px;
+  }
+}
+.right {
+  display: flex;
+  align-items: center;
+  .point {
+    color: v.$dark-blue;
+    border: 1px solid v.$background-color;
+    padding: 4px 7.5px;
+    border-radius: 4px;
+    margin: 0 12px;
   }
 }
