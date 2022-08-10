@@ -7,12 +7,12 @@
     "tasks": [
       {
         "id": 11,
-        "content": "content",
+        "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat quasi iure consectetur. Assumenda similique, dicta repellendus ipsam nemo minima, culpa nihil officia quod beatae ullam soluta fugiat aspernatur. Blanditiis, laudantium?",
         "taksCode": "TSK-01",
-        "taksCodeIcon": "icon",
+        "taksCodeIcon": "check",
         "importancy": "lower",
         "points": 8,
-        "userLogo": "userLogo"
+        "userLogo": "profile1"
       }
     ]
   },
@@ -24,12 +24,12 @@
     "tasks": [
       {
         "id": 21,
-        "content": "content",
+        "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat quasi iure consectetur. Assumenda similique, dicta repellendus ipsam nemo minima, culpa nihil officia quod beatae ullam soluta fugiat aspernatur. Blanditiis, laudantium?",
         "taksCode": "TSK-01",
-        "taksCodeIcon": "icon",
-        "importancy": "lower",
-        "points": 8,
-        "userLogo": "userLogo"
+        "taksCodeIcon": "check",
+        "importancy": "higher",
+        "points": 3,
+        "userLogo": "profile2"
       }
     ]
   }
