@@ -21,11 +21,11 @@ const TaskCard: FC<TaskCardProps> = ({ info, index, name }) => {
     e.stopPropagation();
     const { height } = e.currentTarget.getBoundingClientRect();
 
-    dispatch(updateDragItem({ index, info, name, height: height - 24 }));
+    dispatch(updateDragItem({ index, info, name, height: height - 12 }));
     dispatch(updateDragOverItem({ index, info, name }));
 
     const taskGrayBackgroundPlaceHolder = getPlaceHolderDiv();
-    taskGrayBackgroundPlaceHolder!.style.height = `${height - 12}px`;
+    taskGrayBackgroundPlaceHolder!.style.height = `${height}px`;
     // setTimeout used to show different style of dragging item
     const Item = e.currentTarget;
     setTimeout(() => {
