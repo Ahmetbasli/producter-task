@@ -1,0 +1,40 @@
+@use "src/styles/variables/index" as v;
+
+.wrapper {
+  cursor: pointer;
+  background: none;
+  border: none;
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+  color: v.$main-text-color;
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-radius: 4px;
+  &Active {
+    background: v.$text-blue;
+    span {
+      color: v.$white;
+    }
+    img {
+      filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%)
+        hue-rotate(163deg) brightness(107%) contrast(101%);
+    }
+  }
+  img {
+    margin-right: 8px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: calc(50% - 2.5px);
+    right: 8px;
+    height: 5px;
+    width: 5px;
+
+    background: v.$white;
+    border-radius: 1.5px;
+  }
+}
