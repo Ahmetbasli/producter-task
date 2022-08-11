@@ -1,33 +1,39 @@
 import React from "react";
-import Button from "src/common/button";
+import Button from "src/common/Button";
 import Icon from "src/common/Icon";
 import styles from "./index.module.scss";
-
+import HomeIcon from "src/assets/icons/home.svg";
+import ChatIcon from "src/assets/icons/chat.svg";
+import DashBoardIcon from "src/assets/icons/dashboard.svg";
+import ExploreIcon from "src/assets/icons/explore.svg";
+import RepeatIcon from "src/assets/icons/repeat.svg";
+import PlusIcon from "src/assets/icons/plus.svg";
+import ChatAltIcon from "src/assets/icons/chat-alt.svg";
+import BellIcon from "src/assets/icons/bell.svg";
+import Profile1Icon from "src/assets/icons/profile1.svg";
+import ELogoIcon from "src/assets/icons/eLogo.svg";
 const Sidebar = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.top}>
-        <Button icon="home" text="Dashboard" />
-        <Button icon="chat" text="Feedback" />
-        <Button icon="dashboard" text="Task" isActive={true} />
-        <Button icon="explore" text="Roadmap" />
-        <Button icon="repeat" text="Changelog" />
+        <Button Icon={HomeIcon} text="Dashboard" />
+        <Button Icon={ChatIcon} text="Feedback" />
+        <Button Icon={DashBoardIcon} text="Task" isActive={true} />
+        <Button Icon={ExploreIcon} text="Roadmap" />
+        <Button Icon={RepeatIcon} text="Changelog" />
       </div>
       <div className={styles.bottom}>
-        <Button icon="plus" text="Invite people" />
-        <Button icon="chat-alt" text="Help & Community" />
-        <Button icon="bell" text="Notifications" />
-
+        <Button Icon={PlusIcon} text="Invite people" />
+        <Button Icon={ChatAltIcon} text="Help & Community" />
+        <Button Icon={BellIcon} text="Notifications" />
         <button className={styles.button}>
-          <Icon name="profile1" />
+          <Profile1Icon />
           <span>Neil Larkins</span>
         </button>
         <button className={styles.button}>
-          <Icon name="eLogo" />
+          <ELogoIcon />
           <span>Epodpay Inc.</span>
         </button>
-
-        <div></div>
       </div>
     </div>
   );

@@ -7,7 +7,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   button {
+    display: flex;
+    align-items: center;
     cursor: pointer;
     background: none;
     border: none;
@@ -17,6 +20,7 @@
 .arrow {
   padding-right: 16px;
   border-right: 1px solid v.$light-gray-border;
+  font-size: 24px;
 }
 
 .left {
@@ -27,20 +31,27 @@
     align-items: center;
     padding: 0 8px;
     border-right: 1px solid v.$light-gray-border;
+    font-size: 16px;
     span {
+      color: v.$main-text-color;
       margin-left: 4px;
       font-weight: 300;
       font-size: 13px;
       line-height: 24px;
+      font-family: "Inter";
+      letter-spacing: -0.01em;
     }
   }
   .last {
     display: flex;
     align-items: center;
+
     .calendar {
+      font-size: 16px;
       margin-left: 12px;
     }
     .peopleGray {
+      font-size: 16px;
       margin-left: 16px;
     }
     span {
@@ -67,7 +78,7 @@
 
   .dashboardGray {
     display: flex;
-    padding: 4px;
+    padding: 5px;
     background: #f0f1f4;
     margin-right: 8px;
     border-radius: 4px;

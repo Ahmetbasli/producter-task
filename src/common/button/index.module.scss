@@ -17,7 +17,7 @@
     span {
       color: v.$white;
     }
-    img {
+    svg {
       filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%)
         hue-rotate(163deg) brightness(107%) contrast(101%);
     }
