@@ -1,13 +1,7 @@
 import React, { FC } from "react";
 import styles from "./index.module.scss";
 
-export interface ActiveBarNumber {
-  lower: number;
-  middle: number;
-  higher: number;
-}
-
-const ImportancyBarrs: FC<{ importancy: keyof ActiveBarNumber }> = ({
+const ImportancyBarrs: FC<{ importancy: "lower" | "middle" | "higher" }> = ({
   importancy,
 }) => {
   const activeBarNumber = {

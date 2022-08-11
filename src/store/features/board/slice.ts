@@ -1,11 +1,11 @@
 import type { RootState } from "src/store/app/store";
-import BoardState, { DragItemProp } from "src/store/features/board/types";
+import BoardState, { CardProps } from "src/store/features/board/types";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import lists from "src/data/KanbanBoardLists.json";
 const initialState: BoardState = {
   dragItem: null,
   dragOverItem: null,
-  lists: lists,
+  lists: lists as CardProps[],
 };
 
 const boardSlice = createSlice({

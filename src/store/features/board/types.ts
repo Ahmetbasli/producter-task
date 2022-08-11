@@ -1,5 +1,3 @@
-import { ActiveBarNumber } from "src/common/ImportancyBars";
-
 export interface DragItem {
   taskInfo: any;
   TaskListId: number;
@@ -11,7 +9,7 @@ export interface Task {
   content: string;
   taksCode: string;
   taksCodeIcon: string;
-  importancy: keyof ActiveBarNumber;
+  importancy: "lower" | "middle" | "higher";
   points: number;
   userLogo: string;
 }
