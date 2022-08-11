@@ -1,8 +1,12 @@
 @use "src/styles/variables/index" as v;
 .wrapper {
+  padding: 16px 12px 20px 12px;
   background-color: v.$white;
   height: calc(100vh - 56px);
   width: 185px;
   border: 1px solid #f6f9fb;
   border-top: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
