@@ -4,7 +4,7 @@
   background-color: v.$white;
   height: calc(100vh - 56px);
   width: 185px;
-  border: 1px solid #f6f9fb;
+  border: 1px solid v.$light-gray-border;
   border-top: none;
   display: flex;
   flex-direction: column;
@@ -15,10 +15,10 @@
   background: none;
   border: none;
   width: 100%;
-  padding: 16px;
+  padding: 16px 4px;
   display: flex;
   align-items: center;
-  border-top: 1px solid #f6f9fb;
+  border-top: 1px solid v.$light-gray-border;
   span {
     margin-left: 6px;
     font-weight: 400;
