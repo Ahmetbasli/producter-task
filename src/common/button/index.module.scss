@@ -12,6 +12,12 @@
   align-items: center;
   position: relative;
   border-radius: 4px;
+  span {
+    letter-spacing: 0.02em;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+  }
   &Active {
     background: v.$text-blue;
     span {
