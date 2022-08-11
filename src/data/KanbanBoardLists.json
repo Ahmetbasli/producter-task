@@ -24,9 +24,9 @@
     "tasks": [
       {
         "id": 21,
-        "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat quasi iure consectetur. Assumenda similique, dicta repellendus ipsam nemo minima, culpa nihil officia quod beatae ullam soluta fugiat aspernatur. Blanditiis, laudantium?",
-        "taksCode": "TSK-01",
-        "taksCodeIcon": "check",
+        "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
+        "taksCode": "EPC-02",
+        "taksCodeIcon": "cube",
         "importancy": "higher",
         "points": 3,
         "userLogo": "profile2"
