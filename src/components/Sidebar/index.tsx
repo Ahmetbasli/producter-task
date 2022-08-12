@@ -11,6 +11,11 @@ import ChatAltIcon from "src/assets/icons/chat-alt.svg";
 import BellIcon from "src/assets/icons/bell.svg";
 import Profile1Icon from "src/assets/icons/profile1.svg";
 import ELogoIcon from "src/assets/icons/eLogo.svg";
+import { useAppDispatch, useAppSelector } from "src/store/app/hooks";
+import {
+  selectActiveButtonText,
+  updateActiveButtonText,
+} from "src/store/features/sidebar/slice";
 
 const topButtons = [
   {
@@ -36,9 +41,11 @@ const topButtons = [
 ];
 
 const Sidebar = () => {
-  const [activeButtonText, setActiveButtonText] = useState("Task");
+  const dispatch = useAppDispatch();
+  const activeButtonText = useAppSelector(selectActiveButtonText);
+
   const handleTopButtonClick = (text: string) => {
-    setActiveButtonText(text);
+    dispatch(updateActiveButtonText({ text }));
   };
   return (
     <div className={styles.wrapper}>

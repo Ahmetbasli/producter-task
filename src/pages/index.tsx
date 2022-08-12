@@ -5,7 +5,10 @@ import KanbanBoard from "src/components/KanbanBoard";
 import Sidebar from "src/components/Sidebar";
 import SubHeader from "src/components/SubHeader";
 import styles from "src/pages/index.module.scss";
+import { useAppSelector } from "src/store/app/hooks";
+import { selectActiveButtonText } from "src/store/features/sidebar/slice";
 const Home: NextPage = () => {
+  const sideBarActiveButtonText = useAppSelector(selectActiveButtonText);
   return (
     <>
       <Head>
@@ -18,7 +21,7 @@ const Home: NextPage = () => {
         <Sidebar />
         <div className={styles.rightSide}>
           <SubHeader />
-          <KanbanBoard />
+          {sideBarActiveButtonText === "Task" ? <KanbanBoard /> : ""}
         </div>
       </div>
     </>
