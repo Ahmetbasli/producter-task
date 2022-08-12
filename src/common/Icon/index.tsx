@@ -12,7 +12,7 @@ const Icon: FC<{ name: string }> = ({ name }) => {
     if (image.current!.complete) setsImageLoaded(true);
   }, []);
   return (
-    <>
+    <div>
       <img
         style={{ display: `${!isImageLoaded ? "none" : "block"}` }}
         ref={image}
@@ -20,8 +20,8 @@ const Icon: FC<{ name: string }> = ({ name }) => {
         onLoad={handleLoad}
         alt={`${name} icon`}
       />
-      {!isImageLoaded && <Skeleton variant="circular" width={16} height={16} />}
-    </>
+      {!isImageLoaded && <Skeleton variant="circular" width={22} height={22} />}
+    </div>
   );
 };
 
