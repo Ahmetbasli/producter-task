@@ -12,7 +12,6 @@ import {
   selectBoard,
 } from "src/store/features/board/slice";
 import { Box } from "@mui/system";
-import { flushSync } from "react-dom";
 import { validateContent, validatePoint } from "./utils/validation-functions";
 
 interface TaskAddModalProps {
