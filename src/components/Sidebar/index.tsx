@@ -1,6 +1,5 @@
 import React from "react";
 import Button from "src/common/Button";
-import Icon from "src/common/Icon";
 import styles from "./index.module.scss";
 import HomeIcon from "src/assets/icons/home.svg";
 import ChatIcon from "src/assets/icons/chat.svg";
