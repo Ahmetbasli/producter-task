@@ -1,5 +1,5 @@
 import type { RootState } from "src/store/app/store";
-import BoardState, { CardProps } from "src/store/features/board/types";
+import BoardState, { CardProps, Task } from "src/store/features/board/types";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import lists from "src/data/KanbanBoardLists.json";
 const initialState: BoardState = {
@@ -28,6 +28,17 @@ const boardSlice = createSlice({
         .find((list) => list.id === action.payload.TaskListId)
         ?.tasks.push(state.dragItem.taskInfo);
     },
+    addToListAsFirstTask(
+      state,
+      action: PayloadAction<{
+        taskListId: number;
+        taskInfo: Task;
+      }>
+    ) {
+      state.lists
+        .find((list) => list.id === action.payload.taskListId)
+        ?.tasks.unshift(action.payload.taskInfo);
+    },
     updateLists(state) {
       if (!state.dragItem || !state.dragOverItem) return;
 
@@ -47,8 +58,13 @@ const boardSlice = createSlice({
   },
 });
 
-export const { addToList, updateDragItem, updateDragOverItem, updateLists } =
-  boardSlice.actions;
+export const {
+  addToList,
+  addToListAsFirstTask,
+  updateDragItem,
+  updateDragOverItem,
+  updateLists,
+} = boardSlice.actions;
 
 export const selectBoard = (state: RootState) => state.board;
 export const selectDragItem = (state: RootState) => state.board.dragItem;

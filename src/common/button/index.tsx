@@ -13,8 +13,6 @@ const Button: FC<ButtonProps> = ({
   isActive = false,
   iconMarginLeft,
 }) => {
-  console.log(Icon);
-
   return (
     <button
       className={`${styles.wrapper} ${isActive ? styles.wrapperActive : ""} `}
