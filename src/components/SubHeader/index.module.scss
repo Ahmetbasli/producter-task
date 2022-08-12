@@ -75,7 +75,9 @@
   align-items: center;
   padding-left: 8px;
   border-left: 1px solid v.$light-gray-border;
-
+  button {
+    padding: 0;
+  }
   .dashboardGray {
     display: flex;
     padding: 4px;

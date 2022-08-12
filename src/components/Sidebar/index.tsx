@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "src/common/Button";
 import styles from "./index.module.scss";
 import HomeIcon from "src/assets/icons/home.svg";
@@ -12,15 +12,51 @@ import BellIcon from "src/assets/icons/bell.svg";
 import Profile1Icon from "src/assets/icons/profile1.svg";
 import ELogoIcon from "src/assets/icons/eLogo.svg";
 
+const topButtons = [
+  {
+    icon: HomeIcon,
+    text: "Dashboard",
+  },
+  {
+    icon: ChatIcon,
+    text: "Feedback",
+  },
+  {
+    icon: DashBoardIcon,
+    text: "Task",
+  },
+  {
+    icon: ExploreIcon,
+    text: "Roadmap",
+  },
+  {
+    icon: RepeatIcon,
+    text: "Changelog",
+  },
+];
+
 const Sidebar = () => {
+  const [activeButtonText, setActiveButtonText] = useState("Task");
+  const handleTopButtonClick = (text: string) => {
+    setActiveButtonText(text);
+  };
   return (
     <div className={styles.wrapper}>
       <div className={styles.top}>
-        <Button Icon={HomeIcon} text="Dashboard" />
+        {topButtons.map(({ icon, text }) => (
+          <div key={text} onClick={() => handleTopButtonClick(text)}>
+            <Button
+              Icon={icon}
+              text={text}
+              isActive={text === activeButtonText ? true : false}
+            />
+          </div>
+        ))}
+        {/* <Button Icon={HomeIcon} text="Dashboard" />
         <Button Icon={ChatIcon} text="Feedback" />
         <Button Icon={DashBoardIcon} text="Task" isActive={true} />
         <Button Icon={ExploreIcon} text="Roadmap" />
-        <Button Icon={RepeatIcon} text="Changelog" />
+        <Button Icon={RepeatIcon} text="Changelog" /> */}
       </div>
       <div className={styles.bottom}>
         <Button Icon={PlusIcon} text="Invite people" />

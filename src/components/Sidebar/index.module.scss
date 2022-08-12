@@ -14,6 +14,11 @@
     width: 16px;
   }
 }
+.top {
+  button:hover {
+    background: v.$light-gray-border;
+  }
+}
 .button {
   cursor: pointer;
   background: none;
