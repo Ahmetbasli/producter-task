@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import styles from "./index.module.scss";
+
 interface ButtonProps {
   text: string;
   Icon?: string;
