@@ -3,7 +3,7 @@ import styles from "./index.module.scss";
 
 interface ButtonProps {
   text: string;
-  Icon?: string;
+  Icon?: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
   iconMarginLeft?: string;
   isActive?: boolean;
 }
