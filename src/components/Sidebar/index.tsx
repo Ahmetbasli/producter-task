@@ -11,6 +11,7 @@ import ChatAltIcon from "src/assets/icons/chat-alt.svg";
 import BellIcon from "src/assets/icons/bell.svg";
 import Profile1Icon from "src/assets/icons/profile1.svg";
 import ELogoIcon from "src/assets/icons/eLogo.svg";
+
 const Sidebar = () => {
   return (
     <div className={styles.wrapper}>
