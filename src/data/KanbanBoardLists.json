@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "title": "To do",
+    "title": "To Do",
     "icon": "todo",
     "points": 123,
     "tasks": [
