@@ -1,0 +1,35 @@
+@use "src/styles/variables/index" as v;
+.wrapper {
+  background-color: v.$white;
+  padding: 24px;
+  border: 1px solid rgba(0, 23, 71, 0.07);
+  border-radius: 8px;
+  width: 290px;
+  height: 100%;
+  margin-right: 15px;
+  display: inline-table;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 13.5px;
+  border-bottom: 1px solid #f6f9fb;
+  margin-bottom: 4px;
+}
+.title {
+  display: flex;
+  align-items: center;
+
+  span {
+    font-size: 16px;
+    line-height: 19px;
+    margin-left: 8px;
+  }
+}
+.points {
+  border-radius: 4px;
+  padding: 4px;
+  background-color: v.$light-blue;
+  color: v.$text-blue;
+}

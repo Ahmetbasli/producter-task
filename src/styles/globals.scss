@@ -1,0 +1,11 @@
+@use "src/styles/variables/index" as v;
+@import "src/styles/base/_reset";
+
+body {
+  color: v.$main-text-color;
+  font-family: v.$primary-font;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 15.73px;
+  font-feature-settings: "liga" off;
+}
