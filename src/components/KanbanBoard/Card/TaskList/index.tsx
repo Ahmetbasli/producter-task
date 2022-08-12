@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useRef, useState } from "react";
+import React, { FC, useState } from "react";
 import { useAppDispatch, useAppSelector } from "src/store/app/hooks";
 import { addToList, selectDragItem } from "src/store/features/board/slice";
 import styles from "./index.module.scss";

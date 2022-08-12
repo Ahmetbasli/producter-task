@@ -1,5 +1,4 @@
 import React from "react";
-import Icon from "src/common/Icon";
 import styles from "./index.module.scss";
 import ArrowLeftIcon from "src/assets/icons/arrow-left.svg";
 import SprIcon from "src/assets/icons/spr.svg";

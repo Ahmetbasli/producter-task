@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Button from "src/common/Button";
 import styles from "./index.module.scss";
 import HomeIcon from "src/assets/icons/home.svg";
@@ -59,11 +59,6 @@ const Sidebar = () => {
             />
           </div>
         ))}
-        {/* <Button Icon={HomeIcon} text="Dashboard" />
-        <Button Icon={ChatIcon} text="Feedback" />
-        <Button Icon={DashBoardIcon} text="Task" isActive={true} />
-        <Button Icon={ExploreIcon} text="Roadmap" />
-        <Button Icon={RepeatIcon} text="Changelog" /> */}
       </div>
       <div className={styles.bottom}>
         <Button Icon={PlusIcon} text="Invite people" />

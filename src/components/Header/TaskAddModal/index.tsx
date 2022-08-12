@@ -5,13 +5,13 @@ import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogTitle from "@mui/material/DialogTitle";
+import { Box } from "@mui/system";
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 import { useAppDispatch, useAppSelector } from "src/store/app/hooks";
 import {
   addToListAsFirstTask,
   selectBoard,
 } from "src/store/features/board/slice";
-import { Box } from "@mui/system";
 import { validateContent, validatePoint } from "./utils/validation-functions";
 
 interface TaskAddModalProps {

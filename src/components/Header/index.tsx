@@ -1,5 +1,4 @@
 import React from "react";
-
 import styles from "./index.module.scss";
 import ProducterLogo from "src/assets/icons/producterLogo.svg";
 import SearchIcon from "src/assets/icons/search.svg";

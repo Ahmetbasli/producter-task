@@ -1,4 +1,4 @@
-import React, { FC, useEffect } from "react";
+import React, { FC } from "react";
 import Icon from "src/common/Icon";
 import ImportancyBarrs from "src/common/ImportancyBars";
 import { useAppDispatch, useAppSelector } from "src/store/app/hooks";
