@@ -1,5 +1,5 @@
-import { Skeleton } from "@mui/material";
 import React, { FC, useEffect, useRef, useState } from "react";
+import { Skeleton } from "@mui/material";
 
 const Icon: FC<{ name: string }> = ({ name }) => {
   const [isImageLoaded, setsImageLoaded] = useState(false);
@@ -14,6 +14,7 @@ const Icon: FC<{ name: string }> = ({ name }) => {
   return (
     <>
       <img
+        style={{ display: `${!isImageLoaded ? "none" : "block"}` }}
         ref={image}
         src={`/icons/${name}.svg`}
         onLoad={handleLoad}
