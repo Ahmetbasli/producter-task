@@ -6,6 +6,10 @@ https://user-images.githubusercontent.com/68350525/184532197-e8b086a8-2758-45b2-
 
 NextJS, TypeScript, Sass
 
+## Limitations
+
+App doesn't have support for mobile users.
+
 ### Live
 
 Deployed via vercel [https://producter-task-olive.vercel.app/](https://producter-task-olive.vercel.app/)
