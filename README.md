@@ -1,6 +1,6 @@
-# Subly
+# Producter 
 
-<!-- ![the vieo](./public/producter-task.mov) -->
+https://user-images.githubusercontent.com/68350525/184532197-e8b086a8-2758-45b2-9bc0-4e5192f89c8c.mov
 
 ### Technologies
 
